@@ -385,9 +385,3 @@ input[type=checkbox]:checked+label {
 .footer__logo span {
     font-weight: 700;
 }
-
-/*footer::after, nav::after, aside::after, .section__price::after, .section__contact::after {*/
-    /*content: "";*/
-    /*display: block;*/
-    /*clear: both;*/
-/*}*/
