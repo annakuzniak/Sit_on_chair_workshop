@@ -234,7 +234,7 @@ header {
 .border span{
     text-transform: uppercase;
 }
-p .border{
+p.border{
     margin: 150px 0 0 10px;
 }
 .opacity{
@@ -245,7 +245,7 @@ p .border{
     margin-top: 15px;
     margin-left: 25px;
 }
-.text_box>p:nth-of-type(3)){
+.text_box>p:nth-of-type(3){
     margin-top: 100px;
 }
 

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    //submenu
+    //1. submenu
 
     var mainList = document.querySelectorAll("nav>ul>li");
 
@@ -23,7 +23,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // 2. mouseover/mouseout
 
+    var pictOne = document.querySelector('div.box_clair.box');
+    var pictTwo = document.querySelector('div.box_margarita.box');
+
+
+    pictOne.addEventListener('mouseover', function () {
+
+        this.firstElementChild.style.visibility = 'hidden';
+
+    });
+    pictOne.addEventListener('mouseout', function () {
+
+        this.firstElementChild.style.visibility = 'visible';
+
+    });
+
+    pictTwo.addEventListener('mouseover', function () {
+
+        this.firstElementChild.style.visibility = 'hidden';
+
+    });
+    pictTwo.addEventListener('mouseout', function () {
+
+        this.firstElementChild.style.visibility = 'visible';
+
+    });
 
 
 });
