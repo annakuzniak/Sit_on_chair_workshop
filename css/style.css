@@ -27,40 +27,116 @@ header {
     color: white;
 }
 
-header .logo {
+.main-header {
+    background: black;
     color: white;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+    height: 40px;
+}
+
+.main-header .main-logo {
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 4px;
     float: left;
-    font-weight: 700;
-    line-height: 50px;
-    font-size: 15px;
+    font-weight: bold;
 }
 
-.logo span {
-    color: #0CCACA;
-}
-
-header nav >ul {
-    float: right;
-}
-
-header nav>ul>li {
-    display: block;
-    float: left;
-    line-height: 50px;
-}
-
-header nav a {
-    font-size: 15px;
-    color: white;
-    text-transform: uppercase;
+.main-header .main-logo a {
     text-decoration: none;
-    margin-right: 40px;
-    font-weight: 700;
+    color:#fff;
 }
 
-header li:last-child a{
+.main-header .main-logo span {
+    color: #38C3AD;
+}
+
+
+.main-nav {
+    float: right;
+    text-align: right;
+    padding-right: 6px;
+    padding-left: 12px;
+    word-spacing: 2px;
+    font-size: 15px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.main-nav li a {
+    color: white;
+    line-height: 40px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.5s color;
+}
+
+.main-nav li a:hover {
+    color: #27C7AB;
+}
+
+.main-nav .main-nav-submenu {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+    padding: 10px 0;
+    opacity: 0; /* plynne pokazywanie podmenu - 3 linijki */
+    visibility: hidden;
+    text-align: left;
+    transition: 0.5s opacity;
+    z-index: 10000;
+}
+
+.main-nav .main-nav-submenu:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; /* rgba(0,0,0,0); */
+    border-bottom-color: #000;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
+}
+
+.main-nav .main-nav-submenu:after {
+    content: ''; /* to jest zaslepka by mozna bylo najechac na menu - czemu? - usun ten caly after dla testu */
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 100%;
+    height: 15px;
+}
+
+.main-nav li:hover .main-nav-submenu {
+    opacity: 1; /* pokazanie menu po najechaniu */
+    visibility: visible;
+}
+
+.main-nav li:hover > a {
+    color: #27C7AB;
+}
+
+.main-nav .main-nav-submenu li {
+    display: block;
+    text-align: left;
+    padding: 0;
     margin: 0;
+}
+
+.main-nav .main-nav-submenu li a {
+    height: 30px;
+    line-height: 30px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 0 20px;
 }
 
 .chair_section {
@@ -385,9 +461,3 @@ input[type=checkbox]:checked+label {
 .footer__logo span {
     font-weight: 700;
 }
-
-/*footer::after, nav::after, aside::after, .section__price::after, .section__contact::after {*/
-    /*content: "";*/
-    /*display: block;*/
-    /*clear: both;*/
-/*}*/
